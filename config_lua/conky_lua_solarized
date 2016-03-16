@@ -28,9 +28,9 @@ conky.config = {
 	font = 'Bitstream Vera Sans:size=8',
 	xftalpha = 0.5,
 	uppercase = false,
-	default_color = '93A1A1',
-	color2 = '586E75',
-	lua_load = '/usr/share/conky/clock_rings_grey.lua',
+        default_color = '93A1A1',
+        color2 = '586E75',
+	lua_load = '/usr/share/conky/clock_rings_solarized.lua',
 	lua_draw_hook_pre = 'clock_rings'
 }
 
@@ -39,7 +39,7 @@ ${voffset 8}$color2${font Bitstream Vera Sans:size=16}${time %A}$font\
 ${voffset -8}$alignr$color${font Bitstream Vera Sans:size=38}${time %e}$font
 $color${voffset -30}$color${font Bitstream Vera Sans:size=18}${time %b}$font\
 ${voffset -3} $color${font Bitstream Vera Sans:size=20}${time %Y}$font$color2$hr
-${voffset -17}${image /usr/share/icons/logo_grey.png -p 69,116 -s 60x74}
+${voffset -17}${image /usr/share/icons/logo_solarized.png -p 69,116 -s 60x74}
 #
 # Use the search function on http://weather.noaa.gov/ to find your desired four letter city codes and replace "LOWW" and "KDET" in the next lines:
 ${voffset 162}${font Bitstream Vera Sans:size=10}${alignr}Wien
@@ -52,7 +52,7 @@ $color2${goto 20}CPU
 $color${goto 45}${voffset 23}$mem
 $color2${goto 45}RAM
 #
-# uncomment and activate in /usr/share/conky/clock_rings_grey.lua to display swap usage:
+# uncomment and activate in /usr/share/conky/clock_rings_solarized.lua to display swap usage:
 # ${color}${goto 70}${voffset 23}${swapperc}%
 # ${color2}${goto 70}Swap
 #

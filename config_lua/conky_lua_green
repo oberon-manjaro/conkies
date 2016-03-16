@@ -1,60 +1,44 @@
-# Conky settings #
-background yes
-update_interval 1
+conky.config = {
+	alignment = 'top_right',
+	gap_x = 25,
+	gap_y = 15,
+	background = true,
+	update_interval = 1.0,
+	cpu_avg_samples = 2,
+	net_avg_samples = 2,
+	override_utf8_locale = true,
+	double_buffer = true,
+	no_buffers = true,
+	text_buffer_size = 2048,
+	temperature_unit = 'celsius',
+	own_window = true,
+	own_window_type = 'override',
+	own_window_transparent = true,
+	own_window_class = 'Conky',
+	border_inner_margin = 0,
+	border_outer_margin = 0,
+	minimum_height = 200,
+	  minimum_width = 50,
+	maximum_width = 200,
+	draw_shades = false,
+	draw_outline = false,
+	draw_borders = false,
+	draw_graph_borders = false,
+	use_xft = true,
+	font = 'Bitstream Vera Sans:size=8',
+	xftalpha = 0.5,
+	uppercase = false,
+	default_color = 'FFFFFF',
+	color2 = '2ECC71',
+	lua_load = '/usr/share/conky/clock_rings_green.lua',
+	lua_draw_hook_pre = 'clock_rings'
+}
 
-cpu_avg_samples 2
-net_avg_samples 2
-
-override_utf8_locale yes
-
-double_buffer yes
-no_buffers yes
-
-text_buffer_size 2048
-#imlib_cache_size 0
-
-temperature_unit celsius
-
-# Window specifications #
-
-own_window yes
-own_window_type override
-own_window_transparent yes
-own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
-
-border_inner_margin 0
-border_outer_margin 0
-
-minimum_size 200 50
-maximum_width 200
-
-alignment tr
-gap_x 25
-gap_y 15
-
-# Graphics settings #
-draw_shades no
-draw_outline no
-draw_borders no
-draw_graph_borders no
-
-# Text settings #
-use_xft yes
-xftfont Bitstream Vera Sans:size=8
-xftalpha 0.5
-
-uppercase no
-
-default_color FFFFFF
-color2 2ECC71
-
-# Lua Load  #
-lua_load /usr/share/conky/clock_rings_green.lua
-lua_draw_hook_pre clock_rings
-
-TEXT
-${voffset 8}$color2${font Bitstream Vera Sans:size=16}${time %A}$font${voffset -8}${alignr 50}$color${font Bitstream Vera Sans:size=38}${time %e}$font
-$color${voffset -30}$color${font Bitstream Vera Sans:size=18}${time %b}$font${voffset -3} $color${font Bitstream Vera Sans:size=20}${time %Y}$font$color2$hr
+conky.text = [[
+${voffset 8}$color2${font Bitstream Vera Sans:size=16}${time %A}$font\
+${voffset -8}$alignr$color${font Bitstream Vera Sans:size=38}${time %e}$font
+$color${voffset -30}$color${font Bitstream Vera Sans:size=18}${time %b}$font\
+${voffset -3} $color${font Bitstream Vera Sans:size=20}${time %Y}$font$color2$hr
 ${voffset -17}${image /usr/share/icons/logo_green.png -p 69,116 -s 60x74}
 #
 # Use the search function on http://weather.noaa.gov/ to find your desired four letter city codes and replace "LOWW" and "KDET" in the next lines:
@@ -97,8 +81,9 @@ $color2${top_mem name 2}$alignr$color${top_mem mem_res 2}
 $color2${top_mem name 3}$alignr$color${top_mem mem_res 3}
 $color2${top_mem name 4}$alignr$color${top_mem mem_res 4}
 #
-${voffset 15}$color2$font$alignr${pre_exec whoami}@$nodename
+${voffset 15}$color2$font$alignr${execi 5000 whoami}@$nodename
 # to display arch uncomment:
 ${color2}${font Bitstream Vera Sans:size=8}${alignr}kernel: $color${kernel} $machine
 # to display distribution-details uncomment:
-# $alignr$color${pre_exec awk -F= '/TION/ {print $2}' /etc/lsb-release |sed 's/"//g'} {pre_exec awk -F= '/EASE=/ {printf $2" "} /NAME/ {print $2}' /etc/lsb-release}
+# $alignr$color${execi 5000 awk -F= '/TION/ {print $2}' /etc/lsb-release |sed 's/"//g'} {execi 5000 awk -F= '/EASE=/ {printf $2" "} /NAME/ {print $2}' /etc/lsb-release}
+]]
