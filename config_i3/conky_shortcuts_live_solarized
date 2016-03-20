@@ -23,7 +23,7 @@ or type ${color}sudo setup ${color2}in a terminal (CLI)
 
 ${color2}open new terminal - ${color}mod+Enter
 ${color2}kill focused - ${color}mod+Shift+q
-${color2}toggle splitdirection - ${color}mod+q
+${color2}toggle split direction - ${color}mod+q
 ${color2}dmenu - ${color}mod+d
 ${color2}bmenu - ${color}mod+Ctrl+b
 ${color2}switch to workspace 1-8 - ${color}mod+1-8
