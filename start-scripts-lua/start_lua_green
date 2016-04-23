@@ -1,4 +1,3 @@
-## start the green lua-clock-conky ##
 #!/bin/bash
 
 conky -c /usr/share/conky/conky_lua_green

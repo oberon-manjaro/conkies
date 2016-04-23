@@ -1,4 +1,3 @@
-## start the grey lua-clock-conky ##
 #!/bin/bash
 
 conky -c /usr/share/conky/conky_lua_grey

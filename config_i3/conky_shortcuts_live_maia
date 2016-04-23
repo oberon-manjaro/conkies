@@ -1,12 +1,11 @@
 conky.config = {
 	alignment = 'bottom_left',
 	background = true,
+	color2 = '588078',
 	cpu_avg_samples = 2,
+	default_color = '80FFF9',
 	double_buffer = true,
 	font = 'Bitstream Vera Sans:size=8',
-        draw_shades = false,
-        default_color = '93A1A1',
-        color2 = '586E75',
 	gap_x = 25,
 	gap_y = 45,
 	minimum_width = 200,
@@ -18,11 +17,13 @@ conky.config = {
 	use_xft = true,
 }
 conky.text = [[
+${color2}install manjaro-i3 - ${color}mod+i ${color2}(GUI)
+or type ${color}sudo setup ${color2}in a terminal (CLI)
+
 ${color2}open new terminal - ${color}mod+Enter
 ${color2}kill focused - ${color}mod+Shift+q
 ${color2}toggle split direction - ${color}mod+q
 ${color2}dmenu - ${color}mod+d
-${color2}morc_menu - ${color}mod+z
 ${color2}bmenu - ${color}mod+Ctrl+b
 ${color2}switch to workspace 1-8 - ${color}mod+1-8
 ${color2}send to workspace 1-8 - ${color}mod+Ctrl+1-8
