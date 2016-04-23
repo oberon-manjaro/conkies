@@ -6,6 +6,7 @@ conky.config = {
 	default_color = '80FFF9',
 	double_buffer = true,
 	font = 'Bitstream Vera Sans:size=8',
+	draw_shades = false,
 	gap_x = 25,
 	gap_y = 45,
 	minimum_width = 200,
