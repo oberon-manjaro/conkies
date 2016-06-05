@@ -12,7 +12,6 @@ conky.config = {
 	no_buffers = true,
 	own_window = true,
 	own_window_type = 'override',
-	own_window_argb_visual = true,
 	own_window_transparent = true,
 	update_interval = 1.0,
 	use_xft = true,
