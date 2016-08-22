@@ -18,9 +18,8 @@ conky.config = {
 }
 conky.text = [[
 ${color2}install manjaro-i3 - ${color}mod+i ${color2}(GUI)
-or type ${color}sudo setup ${color2}in a terminal (CLI)
 
-${color2}open new terminal - ${color}mod+Enter
+open new terminal - ${color}mod+Enter
 ${color2}kill focused - ${color}mod+Shift+q
 ${color2}toggle split direction - ${color}mod+q
 ${color2}dmenu - ${color}mod+d
