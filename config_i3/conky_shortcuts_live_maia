@@ -1,7 +1,7 @@
 conky.config = {
 	alignment = 'bottom_left',
 	background = true,
-	color2 = '556064',
+	color2 = '5D7B86',
 	cpu_avg_samples = 2,
 	default_color = 'F9FAF9',
 	double_buffer = true,
@@ -22,6 +22,7 @@ ${color2}install manjaro-i3 - ${color}mod+i ${color2}(Calamares)
 
 open new terminal - ${color}mod+Enter
 ${color2}kill focused - ${color}mod+Shift+q
+${color2}open browser - ${color}mod+F2
 ${color2}toggle split direction - ${color}mod+q
 ${color2}dmenu - ${color}mod+d
 ${color2}bmenu - ${color}mod+Ctrl+b
