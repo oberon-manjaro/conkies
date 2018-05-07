@@ -17,7 +17,8 @@ conky.config = {
 	use_xft = true,
 }
 conky.text = [[
-${color2}install manjaro-i3 - ${color}mod+i ${color2}(Calamares)
+${color2}launch installer Calamares - ${color}mod+i ${color2}
+${color2}launch manjaro-architect - ${color}mod+Ctrl+a
 
 open new terminal - ${color}mod+Enter
 ${color2}kill focused - ${color}mod+Shift+q
