@@ -19,7 +19,6 @@ conky.config = {
 }
 conky.text = [[
 ${color2}launch installer Calamares - ${color}mod+i ${color2}
-${color2}launch manjaro-architect - ${color}mod+Ctrl+a
 
 open new terminal - ${color}mod+Enter
 ${color2}kill focused - ${color}mod+Shift+q
